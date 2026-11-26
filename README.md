@@ -1,17 +1,17 @@
-# database-learning
+# Database Learning
 
 Hands-on notes, sample data, and runnable scripts for learning databases.
 
 [![CI](https://github.com/blaze-b/database-learning/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/blaze-b/database-learning/actions/workflows/ci.yml)
 
-## What's inside
+## What's Inside
 
 | Folder | Status | Description |
 |--------|--------|-------------|
 | [`mongo/`](mongo/) | Ready | MongoDB query reference: notes, sanitised datasets, mongosh scripts, Node examples, exercises |
-| More coming | Planned | Room for other databases (for example SQL or Redis) beside `mongo/` |
+| More Coming | Planned | Room for other databases (for example SQL or Redis) beside `mongo/` |
 
-## Repo layout
+## Repo Layout
 
 ```text
 database-learning/
@@ -38,7 +38,7 @@ database-learning/
 - Node.js 18+ (seed script and Node examples)
 - [mongosh](https://www.mongodb.com/docs/mongodb-shell/) (run query files)
 
-## 2-minute quick start
+## 2-Minute Quick Start
 
 ```bash
 git clone https://github.com/blaze-b/database-learning.git
@@ -52,7 +52,7 @@ mongosh "$MONGODB_URI" --file queries/02-crud-find.mongodb
 
 Default URI is `mongodb://localhost:27017` (see [`mongo/.env.example`](mongo/.env.example)). Full Mongo guide: [`mongo/README.md`](mongo/README.md).
 
-## Add a new database folder
+## Add A New Database Folder
 
 1. Create a sibling of `mongo/` (for example `sql/`) with its own `README.md`.
 2. Keep sample data sanitised; never commit real connection strings or credentials.
@@ -60,7 +60,7 @@ Default URI is `mongodb://localhost:27017` (see [`mongo/.env.example`](mongo/.en
 4. Link the folder from the table above and from any root quick-start notes.
 5. Add CI only when scripts are runnable and deterministic.
 
-## Contributing / conventions
+## Contributing / Conventions
 
 - **Public-safe by default** — scrub hosts, usernames, passwords, tokens, and personal sample data before merging.
 - **Copy files, not history** — do not subtree-merge private training repos into this public repo.

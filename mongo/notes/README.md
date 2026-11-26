@@ -1,8 +1,10 @@
-# notes/
+# Notes
 
 Merged, de-duplicated concept notes from MongoDB training materials (typos fixed; secrets and personal details removed).
 
-## Start here
+**Previous:** [Mongo](../README.md) · **Next:** [Chapter 2: Data](../data/)
+
+## Start Here
 
 Read [`concepts.md`](concepts.md) for:
 
@@ -13,4 +15,10 @@ Read [`concepts.md`](concepts.md) for:
 - Shell basics, `_id`, CRUD overview
 - Indexing, aggregation, and text search pointers
 
-For runnable examples, use [`../queries/`](../queries/) after seeding [`../data/`](../data/).
+## Related Chapters
+
+For runnable examples, use [Chapter 3: Queries](../queries/) after seeding [Chapter 2: Data](../data/).
+
+---
+
+**Previous:** [Mongo](../README.md) · **Next:** [Chapter 2: Data](../data/)

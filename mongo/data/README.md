@@ -1,10 +1,12 @@
-# data/
+# Data
 
 Sanitised JSON sample datasets and the seed script that loads them into local MongoDB.
 
+**Previous:** [Chapter 1: Notes](../notes/) · **Next:** [Chapter 3: Queries](../queries/)
+
 ## Contents
 
-| File | Loaded into |
+| File | Loaded Into |
 |------|-------------|
 | `tours.json` | `learning_mongo.tours` |
 | `profiles.json` | `learning_mongo.profiles` |
@@ -17,7 +19,7 @@ Sanitised JSON sample datasets and the seed script that loads them into local Mo
 | `seed.js` | Node seeder (`MONGODB_URI`) |
 | `json-demo.html` | Browser JSON.parse demo (no server required) |
 
-## How to seed
+## How To Seed
 
 ```bash
 # from mongo/
@@ -29,3 +31,7 @@ npm run seed
 Seed **replaces** the collections listed above. Scratch collections such as `pets` are dropped when present.
 
 Values are intentionally fake (`Ava Example`, `user000@example.test`, `Acme Learning Co`, …). Do not reintroduce real personal or employer data.
+
+---
+
+**Previous:** [Chapter 1: Notes](../notes/) · **Next:** [Chapter 3: Queries](../queries/)

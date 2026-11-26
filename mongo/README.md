@@ -1,8 +1,8 @@
-# mongo/
+# Mongo
 
 MongoDB query reference for writing and testing scripts locally. Notes, sanitised datasets, numbered mongosh files, Node examples, and exercises — without real Atlas hosts or credentials.
 
-## What it covers
+## What It Covers
 
 - Document model basics (JSON/BSON, collections, `_id`)
 - CRUD, filters, projection, sort/limit
@@ -20,7 +20,7 @@ MongoDB query reference for writing and testing scripts locally. Notes, sanitise
 | Node.js 18+ | `data/seed.js` and `node/` examples |
 | mongosh | Run files under `queries/` and `templates/` |
 
-## Quick start
+## Quick Start
 
 ```bash
 # from this folder (mongo/)
@@ -47,26 +47,41 @@ Atlas-style URI (placeholders only — never commit real values):
 mongodb+srv://<username>:<password>@<cluster>.mongodb.net
 ```
 
-## Topic table (query files)
+## Chapters
 
-| File | What it shows | Collection(s) |
-|------|---------------|---------------|
-| [`queries/01-crud-insert.mongodb`](queries/01-crud-insert.mongodb) | `insertOne` / `insertMany`, duplicate `_id`, `ordered: false` | `sample_training.inspections`, `sample_training.pets` |
-| [`queries/02-crud-find.mongodb`](queries/02-crud-find.mongodb) | `find` / `findOne`, equality filters, `countDocuments` | `sample_training.zips`, `learning_mongo.tours` |
-| [`queries/03-crud-update.mongodb`](queries/03-crud-update.mongodb) | `updateOne` / `updateMany` with `$set`, `$inc`, `$push` | `sample_training.zips`, `grades`, `pets` |
-| [`queries/04-crud-delete.mongodb`](queries/04-crud-delete.mongodb) | `deleteOne` / `deleteMany`, `drop` | `sample_training.inspections`, `inspection` |
-| [`queries/05-filters-operators.mongodb`](queries/05-filters-operators.mongodb) | `$lt`/`$gte`/`$in`/`$ne`/`$or`/`$and`/`$exists`/`$regex` | `learning_mongo.tours`, `profiles`, `sample_training.zips` |
-| [`queries/06-projection.mongodb`](queries/06-projection.mongodb) | Include/exclude fields, hide `_id` | `learning_mongo.profiles`, `tours` |
-| [`queries/07-sort-limit.mongodb`](queries/07-sort-limit.mongodb) | `sort`, `limit`, `skip` pagination | `learning_mongo.tours`, `profiles` |
-| [`queries/08-arrays-embedded.mongodb`](queries/08-arrays-embedded.mongodb) | Dot notation, `$size`/`$expr`, `$addToSet` | `learning_mongo.profiles`, `tours`, `users` |
-| [`queries/09-indexes.mongodb`](queries/09-indexes.mongodb) | `createIndex`, `explain` COLLSCAN vs IXSCAN, compound indexes | `learning_mongo.tours`, `numbers` |
-| [`queries/10-aggregation.mongodb`](queries/10-aggregation.mongodb) | `$match`, `$group`, `$sort`, `$project`, `$unwind` | `sample_supplies.sales`, `learning_mongo.tours` |
-| [`queries/11-update-operators.mongodb`](queries/11-update-operators.mongodb) | `$set`/`$unset`/`$inc`/`$push`/`$pull`/`$addToSet`, upsert | `learning_mongo.tours`, `profiles` |
-| [`queries/12-text-search.mongodb`](queries/12-text-search.mongodb) | Text index, `$text`, `textScore` | `learning_mongo.tours` |
+Learning path through this folder, then the numbered query topics.
+
+### Folder Chapters
+
+| Chapter | Title | Path |
+|---------|-------|------|
+| Chapter 1 | Notes | [`notes/`](notes/) |
+| Chapter 2 | Data | [`data/`](data/) |
+| Chapter 3 | Queries | [`queries/`](queries/) |
+| Chapter 4 | Templates | [`templates/`](templates/) |
+| Chapter 5 | Exercises | [`exercises/`](exercises/) |
+| Chapter 6 | Node | [`node/`](node/) |
+
+### Query Chapters
+
+| Chapter | Title | File | Collection(s) |
+|---------|-------|------|---------------|
+| Chapter 1 | Crud Insert | [`queries/01-crud-insert.mongodb`](queries/01-crud-insert.mongodb) | `sample_training.inspections`, `sample_training.pets` |
+| Chapter 2 | Crud Find | [`queries/02-crud-find.mongodb`](queries/02-crud-find.mongodb) | `sample_training.zips`, `learning_mongo.tours` |
+| Chapter 3 | Crud Update | [`queries/03-crud-update.mongodb`](queries/03-crud-update.mongodb) | `sample_training.zips`, `grades`, `pets` |
+| Chapter 4 | Crud Delete | [`queries/04-crud-delete.mongodb`](queries/04-crud-delete.mongodb) | `sample_training.inspections`, `inspection` |
+| Chapter 5 | Filters And Operators | [`queries/05-filters-operators.mongodb`](queries/05-filters-operators.mongodb) | `learning_mongo.tours`, `profiles`, `sample_training.zips` |
+| Chapter 6 | Projection | [`queries/06-projection.mongodb`](queries/06-projection.mongodb) | `learning_mongo.profiles`, `tours` |
+| Chapter 7 | Sort And Limit | [`queries/07-sort-limit.mongodb`](queries/07-sort-limit.mongodb) | `learning_mongo.tours`, `profiles` |
+| Chapter 8 | Arrays And Embedded Docs | [`queries/08-arrays-embedded.mongodb`](queries/08-arrays-embedded.mongodb) | `learning_mongo.profiles`, `tours`, `users` |
+| Chapter 9 | Indexes | [`queries/09-indexes.mongodb`](queries/09-indexes.mongodb) | `learning_mongo.tours`, `numbers` |
+| Chapter 10 | Aggregation | [`queries/10-aggregation.mongodb`](queries/10-aggregation.mongodb) | `sample_supplies.sales`, `learning_mongo.tours` |
+| Chapter 11 | Update Operators | [`queries/11-update-operators.mongodb`](queries/11-update-operators.mongodb) | `learning_mongo.tours`, `profiles` |
+| Chapter 12 | Text Search | [`queries/12-text-search.mongodb`](queries/12-text-search.mongodb) | `learning_mongo.tours` |
 
 More detail: [`queries/README.md`](queries/README.md).
 
-## Databases after seed
+## Databases After Seed
 
 | Database | Collections |
 |----------|-------------|
@@ -74,7 +89,7 @@ More detail: [`queries/README.md`](queries/README.md).
 | `sample_training` | `zips`, `inspections`, `grades` (+ scratch `pets` from demos) |
 | `sample_supplies` | `sales` |
 
-## Query cheat-sheet
+## Query Cheat-Sheet
 
 ```javascript
 use("learning_mongo");
@@ -106,7 +121,7 @@ db.tours.aggregate([
 
 Copy-paste starters: [`templates/`](templates/).
 
-## Write a new query script (from templates)
+## Write A New Query Script (From Templates)
 
 1. Copy [`templates/find-template.mongodb`](templates/find-template.mongodb) or [`templates/aggregation-template.mongodb`](templates/aggregation-template.mongodb) into `queries/`.
 2. Name it with the next number and topic, for example `13-lookup-joins.mongodb`.
@@ -114,13 +129,13 @@ Copy-paste starters: [`templates/`](templates/).
 4. Point `use("...")` at a seeded database (`learning_mongo`, `sample_training`, or `sample_supplies`).
 5. Replace the filter / pipeline stubs; keep examples idempotent when you can (or reseed before CI).
 6. Run locally: `mongosh "${MONGODB_URI:-mongodb://localhost:27017}" --file queries/13-lookup-joins.mongodb`
-7. Link the file in the topic table above and in [`queries/README.md`](queries/README.md).
+7. Link the file in the chapters table above and in [`queries/README.md`](queries/README.md).
 
 ## Exercises
 
 Worked solutions against `profiles`: [`exercises/mongodb-exercises.md`](exercises/mongodb-exercises.md). Seed first so counts and field paths match.
 
-## Environment variables
+## Environment Variables
 
 | Variable | Default | Purpose |
 |----------|---------|---------|
@@ -131,20 +146,9 @@ Worked solutions against `profiles`: [`exercises/mongodb-exercises.md`](exercise
 
 See [`.env.example`](.env.example). Do not commit a real `.env`.
 
-## Folder map
-
-| Path | README |
-|------|--------|
-| [`notes/`](notes/) | [`notes/README.md`](notes/README.md) |
-| [`queries/`](queries/) | [`queries/README.md`](queries/README.md) |
-| [`exercises/`](exercises/) | [`exercises/README.md`](exercises/README.md) |
-| [`data/`](data/) | [`data/README.md`](data/README.md) |
-| [`node/`](node/) | [`node/README.md`](node/README.md) |
-| [`templates/`](templates/) | [`templates/README.md`](templates/README.md) |
-
 ## Troubleshooting
 
-| Symptom | What to try |
+| Symptom | What To Try |
 |---------|-------------|
 | Port `27017` already in use | Stop the other MongoDB, or change the host port mapping in `docker-compose.yml` and update `MONGODB_URI` |
 | `ECONNREFUSED` from seed/Node | `docker compose up -d` and wait for healthy; confirm `docker compose ps` |
