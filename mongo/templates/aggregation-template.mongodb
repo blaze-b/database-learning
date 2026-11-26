@@ -1,0 +1,18 @@
+// Template: aggregation pipeline
+// Replace stages to match / group / project your collection.
+
+use("sample_supplies"); // <-- database
+
+db.sales.aggregate([
+  // { $match: { storeLocation: "Denver" } },
+  {
+    $group: {
+      _id: "$storeLocation", // <-- group key
+      total: { $sum: 1 },
+      // avgField: { $avg: "$customer.satisfaction" },
+    },
+  },
+  { $sort: { total: -1 } },
+  { $limit: 10 },
+  // { $project: { _id: 0, storeLocation: "$_id", total: 1 } },
+]);

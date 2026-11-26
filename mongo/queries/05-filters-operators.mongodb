@@ -1,0 +1,33 @@
+// Topic: Filters and comparison / logical operators
+// Collection: learning_mongo.tours, learning_mongo.profiles, sample_training.zips
+// Shows: $lt/$lte/$gt/$gte/$in/$ne/$or/$and/$exists/$regex
+
+use("learning_mongo");
+
+// Comparison
+db.tours.find({ tourPrice: { $lte: 500 } });
+db.tours.find({ tourLength: { $gte: 3 }, tourPrice: { $lt: 800 } });
+
+// $in / $ne
+db.tours.find({ tourRegion: { $in: ["Central Coast", "Northern California"] } });
+db.tours.find({ tourDifficulty: { $ne: "Easy" } }).limit(5);
+
+// Logical
+db.tours.find({
+  $or: [{ tourTags: "hiking" }, { tourTags: "wine" }],
+});
+
+db.profiles.find({
+  $and: [
+    { "work.experience": { $gte: 2 } },
+    { languages: { $exists: true } },
+  ],
+});
+
+// Regex (case-insensitive starts-with)
+db.profiles.find({ "profile.name": { $regex: /^a/i } });
+
+use("sample_training");
+
+db.zips.find({ pop: { $gt: 20000 }, state: "NY" });
+db.zips.find({ state: { $in: ["NY", "CA"] } });

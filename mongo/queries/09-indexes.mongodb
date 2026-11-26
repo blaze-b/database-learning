@@ -1,0 +1,31 @@
+// Topic: Indexes
+// Collection: learning_mongo.tours, learning_mongo.numbers (scratch)
+// Shows: createIndex, explain COLLSCAN vs IXSCAN, compound indexes
+
+use("learning_mongo");
+
+// Scratch numbers collection for a clear explain demo
+db.numbers.deleteMany({});
+for (let i = 0; i < 10; i++) {
+  db.numbers.insertOne({ numbers: i });
+}
+
+printjson(db.numbers.find({ numbers: 1 }).explain("executionStats").executionStats);
+
+db.numbers.createIndex({ numbers: 1 });
+
+printjson(db.numbers.find({ numbers: 1 }).explain("executionStats").executionStats);
+
+// Tours: index a common filter field
+db.tours.createIndex({ tourPackage: 1 });
+printjson(
+  db.tours
+    .find({ tourPackage: "Taste of California" })
+    .explain("executionStats").executionStats
+);
+
+// Compound index for price + length filters
+db.tours.createIndex({ tourPrice: 1, tourLength: 1 });
+db.tours.find({ tourPrice: { $lte: 500 }, tourLength: { $lte: 3 } });
+
+db.tours.getIndexes();

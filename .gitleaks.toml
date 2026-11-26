@@ -1,0 +1,20 @@
+title = "database-learning gitleaks config"
+
+[extend]
+useDefault = true
+
+# Narrow regex-only allowlists for documented placeholders (no path allowlists).
+[[allowlists]]
+description = "Documented MongoDB localhost URI used in examples"
+regexTarget = "match"
+regexes = [
+  '''mongodb://localhost:27017(?:/[A-Za-z0-9_-]+)?''',
+]
+
+[[allowlists]]
+description = "Documented Atlas URI placeholder with angle-bracket tokens"
+regexTarget = "match"
+regexes = [
+  '''mongodb\+srv://<username>:<password>@<cluster>\.mongodb\.net''',
+  '''<username>:<password>@<cluster>\.mongodb\.net''',
+]

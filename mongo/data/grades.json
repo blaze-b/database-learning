@@ -1,0 +1,40 @@
+[
+  {
+    "student_id": 151,
+    "class_id": 339,
+    "scores": [
+      {
+        "type": "exam",
+        "score": 78
+      },
+      {
+        "type": "quiz",
+        "score": 88
+      }
+    ]
+  },
+  {
+    "student_id": 250,
+    "class_id": 339,
+    "scores": [
+      {
+        "type": "exam",
+        "score": 91
+      },
+      {
+        "type": "quiz",
+        "score": 85
+      }
+    ]
+  },
+  {
+    "student_id": 250,
+    "class_id": 340,
+    "scores": [
+      {
+        "type": "exam",
+        "score": 70
+      }
+    ]
+  }
+]

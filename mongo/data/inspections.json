@@ -1,0 +1,30 @@
+[
+  {
+    "id": "10021-2015-ENFO",
+    "certificate_number": 9278806,
+    "business_name": "ACME DELI GROCERY LLC",
+    "date": "Feb 20 2015",
+    "result": "No Violation Issued",
+    "sector": "Cigarette Retail Dealer - 127",
+    "address": {
+      "city": "EXAMPLEVILLE",
+      "zip": 11385,
+      "street": "SAMPLE ST",
+      "number": 1712
+    }
+  },
+  {
+    "id": "10022-2015-ENFO",
+    "certificate_number": 9278807,
+    "business_name": "DEMO MARKET INC",
+    "date": "Mar 01 2015",
+    "result": "Violation Issued",
+    "sector": "Grocery - 101",
+    "address": {
+      "city": "DEMOTOWN",
+      "zip": 10001,
+      "street": "FIXTURE AVE",
+      "number": 42
+    }
+  }
+]

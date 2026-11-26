@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [master, "cursor-**"]
+  pull_request:
+    branches: [master]
+
+jobs:
+  gitleaks:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install gitleaks
+        run: |
+          curl -sL https://github.com/gitleaks/gitleaks/releases/download/v8.21.2/gitleaks_8.21.2_linux_x64.tar.gz \
+            | tar xz -C /tmp
+          sudo mv /tmp/gitleaks /usr/local/bin/
+          gitleaks version
+
+      - name: Scan working tree (directory mode)
+        run: gitleaks dir . -v --config .gitleaks.toml
+
+      - name: Scan git history
+        run: gitleaks git . -v --config .gitleaks.toml
+
+  mongo-queries:
+    name: Seed and run Mongo queries + Node
+    runs-on: ubuntu-latest
+    services:
+      mongodb:
+        image: mongo:7
+        ports:
+          - 27017:27017
+        options: >-
+          --health-cmd "mongosh --eval 'db.runCommand({ ping: 1 })'"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      MONGODB_URI: mongodb://localhost:27017
+      MONGODB_DB: learning_mongo
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install mongosh
+        run: |
+          curl -sL https://downloads.mongodb.com/compass/mongosh-2.3.8-linux-x64.tgz \
+            | tar xz -C /tmp
+          sudo mv /tmp/mongosh-2.3.8-linux-x64/bin/mongosh /usr/local/bin/
+          mongosh --version
+
+      - name: Install Node dependencies
+        run: |
+          npm --prefix mongo install
+          npm --prefix mongo/node install
+
+      - name: Seed databases
+        run: npm --prefix mongo run seed
+
+      - name: Run every query file with mongosh
+        run: |
+          set -euo pipefail
+          for f in mongo/queries/*.mongodb; do
+            echo "======== Running $f ========"
+            mongosh "$MONGODB_URI" --quiet --file "$f"
+          done
+
+      - name: Run Node basic example
+        run: node mongo/node/basic/index.js
+
+      - name: Run Hapi smoke
+        run: SMOKE=1 node mongo/node/hapi/index.js

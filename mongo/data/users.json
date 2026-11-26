@@ -1,0 +1,38 @@
+{
+  "name": "Ava Example",
+  "favourite_number": 3,
+  "is_programmer": true,
+  "hobbies": [
+    "Swimming",
+    "Singing"
+  ],
+  "friends": [
+    {
+      "name": "Noah Demo",
+      "favourite_number": 3,
+      "is_programmer": false,
+      "hobbies": [
+        "Swimming",
+        "Singing"
+      ]
+    },
+    {
+      "name": "Mia Sample",
+      "favourite_number": 7,
+      "is_programmer": false,
+      "hobbies": [
+        "Hiking",
+        "Chess"
+      ]
+    },
+    {
+      "name": "Liam Fixture",
+      "favourite_number": 1,
+      "is_programmer": true,
+      "hobbies": [
+        "Coding",
+        "Singing"
+      ]
+    }
+  ]
+}

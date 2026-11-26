@@ -1,0 +1,26 @@
+// Topic: Projection
+// Collection: learning_mongo.profiles, learning_mongo.tours
+// Shows: include/exclude fields, suppressing _id
+
+use("learning_mongo");
+
+// Only names
+db.profiles.find({}, { "profile.name": 1, _id: 0 });
+
+// Names + hobbies for hobbies starting with D
+db.profiles.find(
+  { hobbies: { $regex: /^d/i } },
+  { "profile.name": 1, hobbies: 1, _id: 0 }
+);
+
+// Exclude a bulky field from tours
+db.tours.find(
+  { tourPackage: "Taste of California" },
+  { tourDescription: 0, tourBullets: 0 }
+);
+
+// Inclusion projection cannot mix with exclusion (except _id)
+db.tours.find(
+  { tourPrice: { $lte: 500 } },
+  { tourName: 1, tourPrice: 1, tourLength: 1, _id: 0 }
+);

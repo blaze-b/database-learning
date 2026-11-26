@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Acme Learning Co",
+    "numberOfEmployees": 1000,
+    "ceo": "Casey Example",
+    "rating": 3.6
+  },
+  {
+    "name": "Globex Training",
+    "numberOfEmployees": 850,
+    "ceo": "Riley Demo",
+    "rating": 4.1
+  }
+]

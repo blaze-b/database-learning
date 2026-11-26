@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>JSON example (sanitised)</title>
+  </head>
+  <body>
+    <h1>JSON parse demo</h1>
+    <p>Open the browser console to see parsed company sample data.</p>
+    <script>
+      const companies = `[
+        {
+          "name": "Acme Learning Co",
+          "numberOfEmployees": 1000,
+          "ceo": "Casey Example",
+          "rating": 3.6
+        },
+        {
+          "name": "Globex Training",
+          "numberOfEmployees": 850,
+          "ceo": "Riley Demo",
+          "rating": 4.1
+        }
+      ]`;
+      const parsed = JSON.parse(companies);
+      console.log(parsed, parsed[0].name, parsed[1].name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+[
+  {
+    "profile": {
+      "name": "Ava Example",
+      "degree": "B-Tech"
+    },
+    "work": {
+      "company": "Acme Learning Co",
+      "position": "Senior Software Developer",
+      "experience": 3.6
+    },
+    "education": [
+      {
+        "college": "Example State University",
+        "course": "B-tech",
+        "branch": "Mechanical"
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "hobbies": [
+      "Reading",
+      "Drawing"
+    ]
+  },
+  {
+    "profile": {
+      "name": "Noah Demo",
+      "degree": "B-tech"
+    },
+    "work": {
+      "company": "Globex Training",
+      "position": "Software Developer",
+      "experience": 2
+    },
+    "education": [
+      {
+        "college": "Demo Tech Institute",
+        "course": "B-tech",
+        "branch": "Electronics and Communication Engineering"
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "hobbies": [
+      "Origami",
+      "Drawing"
+    ]
+  },
+  {
+    "profile": {
+      "name": "Mia Sample",
+      "degree": "B-Tech"
+    },
+    "work": {
+      "company": "Initech Labs",
+      "position": "Senior Software Developer",
+      "experience": 4.6
+    },
+    "education": [
+      {
+        "college": "Sample College of Engineering",
+        "course": "B-tech",
+        "branch": "Computer Science"
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "hobbies": [
+      "Reading",
+      "Drawing"
+    ]
+  },
+  {
+    "profile": {
+      "name": "Liam Fixture",
+      "degree": "B-Tech"
+    },
+    "work": {
+      "company": "Umbrella Softworks",
+      "position": "Technical Architect",
+      "experience": 10
+    },
+    "education": [
+      {
+        "college": "Fixture Polytechnic",
+        "course": "B-tech",
+        "branch": "Electronics"
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "hobbies": [
+      "Reading",
+      "Drawing"
+    ]
+  },
+  {
+    "profile": {
+      "name": "Zoe Stub",
+      "degree": "B-Tech"
+    },
+    "work": {
+      "company": "Stark Sample Inc",
+      "position": "Senior Software Developer",
+      "experience": 6
+    },
+    "education": [
+      {
+        "college": "Mock Valley College",
+        "course": "B-tech",
+        "branch": "Computer Engineering"
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "hobbies": [
+      "Reading",
+      "Drawing"
+    ]
+  },
+  {
+    "profile": {
+      "name": "Owen Mock",
+      "degree": "B-Tech"
+    },
+    "work": {
+      "company": "Acme Learning Co",
+      "position": "Senior Software Developer",
+      "experience": 3.6
+    },
+    "education": [
+      {
+        "college": "Example State University",
+        "course": "B-tech",
+        "branch": "Computer Engineering"
+      }
+    ],
+    "languages": [
+      "English",
+      "Spanish",
+      "French"
+    ],
+    "hobbies": [
+      "Reading",
+      "Drawing"
+    ]
+  }
+]

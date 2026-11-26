@@ -1,0 +1,17 @@
+{
+  "name": "database-learning-mongo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Seed helpers and shared MongoDB dependency for database-learning/mongo",
+  "scripts": {
+    "seed": "node data/seed.js",
+    "basic": "npm --prefix node run basic",
+    "hapi": "npm --prefix node run hapi"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "mongodb": "^6.12.0"
+  }
+}

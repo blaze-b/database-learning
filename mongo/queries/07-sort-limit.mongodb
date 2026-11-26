@@ -1,0 +1,22 @@
+// Topic: Sort and limit
+// Collection: learning_mongo.tours, learning_mongo.profiles
+// Shows: sort ascending/descending, limit, skip
+
+use("learning_mongo");
+
+db.tours.find({}, { tourName: 1, tourPrice: 1, _id: 0 }).sort({ tourPrice: 1 }).limit(5);
+
+db.tours
+  .find({}, { tourName: 1, tourLength: 1, tourPrice: 1, _id: 0 })
+  .sort({ tourLength: -1, tourPrice: 1 })
+  .limit(5);
+
+// Pagination pattern
+db.tours
+  .find({}, { tourName: 1, _id: 0 })
+  .sort({ tourName: 1 })
+  .skip(5)
+  .limit(5);
+
+// Profiles by name
+db.profiles.find({}, { "profile.name": 1, _id: 0 }).sort({ "profile.name": 1 });

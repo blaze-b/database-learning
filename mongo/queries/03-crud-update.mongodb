@@ -1,0 +1,41 @@
+// Topic: CRUD — updateOne / updateMany
+// Collection: sample_training.zips, sample_training.grades, sample_training.pets
+// Shows: $set, $inc, $push on arrays
+
+use("sample_training");
+
+db.zips.find({ zip: "12534" });
+db.zips.find({ city: "HUDSON" });
+db.zips.countDocuments({ city: "HUDSON" });
+
+// Add 10 to pop for every HUDSON document
+db.zips.updateMany({ city: "HUDSON" }, { $inc: { pop: 10 } });
+
+// Set pop on one zip
+db.zips.updateOne({ zip: "12534" }, { $set: { pop: 17630 } });
+
+// $set can create a new field
+db.zips.updateOne({ zip: "12534" }, { $set: { population: 17630 } });
+
+db.grades.find({ student_id: 151, class_id: 339 });
+
+// Push an embedded document onto scores
+db.grades.updateOne(
+  { student_id: 250, class_id: 339 },
+  { $push: { scores: { type: "extra credit", score: 100 } } }
+);
+
+db.grades.find({ student_id: 250, class_id: 339 });
+
+// Pets climate array updates
+db.pets.deleteMany({});
+db.pets.insertOne({
+  pet: "cat",
+  domestic: false,
+  diet: "carnivorous",
+  climate: ["polar", "equatorial", "continental", "mountain"],
+});
+
+db.pets.updateMany({ pet: "cat" }, { $set: { climate: ["continental", "polar"] } });
+db.pets.updateMany({ pet: "cat" }, { $push: { climate: "mountain" } });
+db.pets.find({ pet: "cat" });

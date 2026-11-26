@@ -1,0 +1,18 @@
+// Topic: CRUD — deleteOne / deleteMany / drop
+// Collection: sample_training.inspections (scratch docs), sample_training.inspection
+// Shows: targeted deletes and dropping a collection
+
+use("sample_training");
+
+// Insert disposable docs so deletes are deterministic in CI
+db.inspections.insertMany([{ test: 1 }, { test: 1 }, { test: 3 }]);
+
+db.inspections.find({ test: 1 });
+db.inspections.find({ test: 3 });
+
+db.inspections.deleteMany({ test: 1 });
+db.inspections.deleteOne({ test: 3 });
+
+// Creating a typo collection, then dropping it
+db.inspection.insertMany([{ _id: 1, test: 1 }, { _id: 3, test: 3 }]);
+db.inspection.drop();

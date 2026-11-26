@@ -1,0 +1,30 @@
+// Topic: Arrays and embedded documents
+// Collection: learning_mongo.profiles, learning_mongo.tours, learning_mongo.users
+// Shows: dot notation, $elemMatch, $size/$expr, $addToSet
+
+use("learning_mongo");
+
+// Embedded field via dot notation
+db.profiles.find({ "work.company": { $exists: true } }, { "profile.name": 1, work: 1, _id: 0 });
+
+db.profiles.find({ "work.experience": { $gte: 2 } }, { "profile.name": 1, _id: 0 });
+
+// Array contains value
+db.tours.find({ tourTags: "hiking" }, { tourName: 1, tourTags: 1, _id: 0 });
+
+// Array length >= 2 via $expr + $size
+db.profiles.find(
+  { $expr: { $gte: [{ $size: "$languages" }, 2] } },
+  { "profile.name": 1, languages: 1, _id: 0 }
+).sort({ "profile.name": 1 });
+
+// Nested friend documents on users
+db.users.find({ "friends.is_programmer": true });
+
+// $addToSet keeps array unique
+db.tours.updateOne(
+  { tourName: "Big Sur Retreat" },
+  { $addToSet: { tourTags: "coastal" } }
+);
+
+db.tours.findOne({ tourName: "Big Sur Retreat" }, { tourName: 1, tourTags: 1, _id: 0 });

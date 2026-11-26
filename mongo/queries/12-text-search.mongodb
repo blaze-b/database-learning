@@ -1,0 +1,25 @@
+// Topic: Text search
+// Collection: learning_mongo.tours
+// Shows: create text index, $text query, textScore projection/sort
+
+use("learning_mongo");
+
+// Drop previous text index if re-running
+const existing = db.tours.getIndexes().filter((idx) => idx.key && idx.key._fts === "text");
+existing.forEach((idx) => db.tours.dropIndex(idx.name));
+
+db.tours.createIndex({
+  tourName: "text",
+  tourDescription: "text",
+  tourTags: "text",
+});
+
+db.tours.find({ $text: { $search: "hiking wine" } }, { tourName: 1, tourTags: 1, _id: 0 });
+
+db.tours
+  .find(
+    { $text: { $search: "California" } },
+    { score: { $meta: "textScore" }, tourName: 1, tourPackage: 1, _id: 0 }
+  )
+  .sort({ score: { $meta: "textScore" } })
+  .limit(5);
