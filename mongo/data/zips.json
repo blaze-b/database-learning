@@ -1,0 +1,62 @@
+[
+  {
+    "zip": "12534",
+    "city": "HUDSON",
+    "state": "NY",
+    "pop": 17620,
+    "loc": [
+      -73.78,
+      42.25
+    ]
+  },
+  {
+    "zip": "12201",
+    "city": "ALBANY",
+    "state": "NY",
+    "pop": 98000,
+    "loc": [
+      -73.75,
+      42.65
+    ]
+  },
+  {
+    "zip": "10001",
+    "city": "NEW YORK",
+    "state": "NY",
+    "pop": 21102,
+    "loc": [
+      -73.99,
+      40.75
+    ]
+  },
+  {
+    "zip": "90210",
+    "city": "BEVERLY HILLS",
+    "state": "CA",
+    "pop": 34000,
+    "loc": [
+      -118.4,
+      34.07
+    ]
+  },
+  {
+    "zip": "94102",
+    "city": "SAN FRANCISCO",
+    "state": "CA",
+    "pop": 28000,
+    "loc": [
+      -122.41,
+      37.77
+    ]
+  },
+  {
+    "zip": "12534",
+    "city": "HUDSON",
+    "state": "NY",
+    "pop": 5000,
+    "loc": [
+      -73.79,
+      42.26
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+// Topic: CRUD — insertOne / insertMany
+// Collection: sample_training.inspections, sample_training.pets
+// Shows: single insert, multi insert, duplicate _id behaviour, ordered:false
+
+use("sample_training");
+
+// Peek at an existing inspection from seed data
+db.inspections.findOne();
+
+// Insert without _id — MongoDB assigns ObjectId
+db.inspections.insertOne({
+  id: "SEED-INSERT-001",
+  certificate_number: 1000001,
+  business_name: "ACME DELI GROCERY LLC",
+  date: "Feb 20 2015",
+  result: "No Violation Issued",
+  sector: "Cigarette Retail Dealer - 127",
+  address: {
+    city: "EXAMPLEVILLE",
+    zip: 11385,
+    street: "SAMPLE ST",
+    number: 1712,
+  },
+});
+
+db.inspections.find({ id: "SEED-INSERT-001" });
+
+// Insert many into a scratch pets collection
+db.pets.deleteMany({});
+db.pets.insertMany([{ pet: "cat" }, { pet: "dog" }, { pet: "fish" }]);
+
+// Ordered insert stops on first duplicate _id
+try {
+  db.pets.insertMany(
+    [
+      { _id: "1", pet: "cat" },
+      { _id: "1", pet: "dog" },
+      { _id: "2", pet: "fish" },
+    ],
+    { ordered: true }
+  );
+} catch (e) {
+  print("Expected ordered insert error:", e.code || e.message);
+}
+
+// Unordered continues after duplicate key errors (shell still surfaces BulkWriteError)
+try {
+  db.pets.insertMany(
+    [
+      { _id: "1", pet: "cat" },
+      { _id: "1", pet: "dog" },
+      { _id: "2", pet: "fish" },
+      { _id: "3", pet: "snake" },
+    ],
+    { ordered: false }
+  );
+} catch (e) {
+  print("Expected unordered bulk write error (partial inserts kept):", e.code || e.message);
+}
+
+db.pets.find().sort({ _id: 1 });

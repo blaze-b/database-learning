@@ -1,0 +1,21 @@
+// Template: find / project / sort / limit
+// Replace DB, collection, filter, and projection before running.
+
+const URI_HINT = "Set MONGODB_URI or connect mongosh to mongodb://localhost:27017";
+
+use("learning_mongo"); // <-- database
+
+const filter = {
+  // "field": "value",
+  // tourPrice: { $lte: 500 },
+};
+
+const projection = {
+  // field: 1,
+  // _id: 0,
+};
+
+db.tours // <-- collection
+  .find(filter, projection)
+  .sort({ /* field: 1 | -1 */ })
+  .limit(20);

@@ -1,0 +1,24 @@
+// Topic: CRUD — find / findOne / count
+// Collection: sample_training.zips, learning_mongo.tours
+// Shows: equality filters, multi-field filters, countDocuments, cursors
+
+use("sample_training");
+
+// Equality filter
+db.zips.find({ state: "NY" });
+
+// Count matching documents
+db.zips.countDocuments({ state: "NY" });
+
+// Multiple fields (AND)
+db.zips.countDocuments({ state: "NY", city: "ALBANY" });
+
+db.zips.find({ state: "NY", city: "ALBANY" });
+
+// findOne returns a single document or null
+db.zips.findOne({ zip: "12534" });
+
+use("learning_mongo");
+
+db.tours.find({ tourPackage: "Backpack Cal" });
+db.tours.findOne({ tourName: "Big Sur Retreat" });

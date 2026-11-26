@@ -1,0 +1,51 @@
+// Topic: Aggregation pipeline
+// Collection: sample_supplies.sales, learning_mongo.tours
+// Shows: $match, $group, $sort, $project, $limit, $unwind
+
+use("sample_supplies");
+
+// Sales count by store location
+db.sales.aggregate([
+  { $group: { _id: "$storeLocation", totalSales: { $sum: 1 } } },
+  { $sort: { totalSales: -1 } },
+]);
+
+// Average customer satisfaction by purchase method
+db.sales.aggregate([
+  {
+    $group: {
+      _id: "$purchaseMethod",
+      avgSatisfaction: { $avg: "$customer.satisfaction" },
+      count: { $sum: 1 },
+    },
+  },
+  { $sort: { avgSatisfaction: -1 } },
+]);
+
+// Unwind line items and tally quantities by item name
+db.sales.aggregate([
+  { $unwind: "$items" },
+  {
+    $group: {
+      _id: "$items.name",
+      totalQty: { $sum: "$items.quantity" },
+    },
+  },
+  { $sort: { totalQty: -1 } },
+  { $limit: 5 },
+]);
+
+use("learning_mongo");
+
+// Average tour price by package
+db.tours.aggregate([
+  {
+    $group: {
+      _id: "$tourPackage",
+      avgPrice: { $avg: "$tourPrice" },
+      count: { $sum: 1 },
+    },
+  },
+  { $project: { _id: 0, tourPackage: "$_id", avgPrice: 1, count: 1 } },
+  { $sort: { avgPrice: 1 } },
+]);

@@ -1,0 +1,1882 @@
+[
+  {
+    "saleDate": {
+      "$date": "2015-01-01T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "M",
+      "age": 25,
+      "email": "user000@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-02-02T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "F",
+      "age": 26,
+      "email": "user001@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-03-03T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "M",
+      "age": 27,
+      "email": "user002@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-04-04T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "F",
+      "age": 28,
+      "email": "user003@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-05-05T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "M",
+      "age": 29,
+      "email": "user004@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-06-06T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "F",
+      "age": 30,
+      "email": "user005@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-07-07T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "M",
+      "age": 31,
+      "email": "user006@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-08-08T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "F",
+      "age": 32,
+      "email": "user007@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-09-09T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "M",
+      "age": 33,
+      "email": "user008@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-10-10T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "F",
+      "age": 34,
+      "email": "user009@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-11-11T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "M",
+      "age": 35,
+      "email": "user010@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-12-12T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "F",
+      "age": 36,
+      "email": "user011@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-01-13T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "M",
+      "age": 37,
+      "email": "user012@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-02-14T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "F",
+      "age": 38,
+      "email": "user013@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-03-15T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "M",
+      "age": 39,
+      "email": "user014@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-04-16T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "F",
+      "age": 40,
+      "email": "user015@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-05-17T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "M",
+      "age": 41,
+      "email": "user016@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-06-18T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "F",
+      "age": 42,
+      "email": "user017@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-07-19T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "M",
+      "age": 43,
+      "email": "user018@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-08-20T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "F",
+      "age": 44,
+      "email": "user019@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-09-21T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "M",
+      "age": 45,
+      "email": "user020@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-10-22T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "F",
+      "age": 46,
+      "email": "user021@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-11-23T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "M",
+      "age": 47,
+      "email": "user022@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-12-24T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "F",
+      "age": 48,
+      "email": "user023@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-01-25T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "M",
+      "age": 49,
+      "email": "user024@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-02-26T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "F",
+      "age": 50,
+      "email": "user025@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-03-27T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "M",
+      "age": 51,
+      "email": "user026@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-04-28T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "F",
+      "age": 52,
+      "email": "user027@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-05-01T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "M",
+      "age": 53,
+      "email": "user028@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-06-02T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "F",
+      "age": 54,
+      "email": "user029@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-07-03T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "M",
+      "age": 55,
+      "email": "user030@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-08-04T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "F",
+      "age": 56,
+      "email": "user031@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-09-05T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "M",
+      "age": 57,
+      "email": "user032@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-10-06T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "F",
+      "age": 58,
+      "email": "user033@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-11-07T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "M",
+      "age": 59,
+      "email": "user034@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-12-08T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "F",
+      "age": 60,
+      "email": "user035@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-01-09T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "M",
+      "age": 61,
+      "email": "user036@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-02-10T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "F",
+      "age": 62,
+      "email": "user037@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-03-11T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "M",
+      "age": 63,
+      "email": "user038@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-04-12T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "F",
+      "age": 64,
+      "email": "user039@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-05-13T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "M",
+      "age": 25,
+      "email": "user040@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-06-14T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "F",
+      "age": 26,
+      "email": "user041@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-07-15T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "M",
+      "age": 27,
+      "email": "user042@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-08-16T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "F",
+      "age": 28,
+      "email": "user043@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-09-17T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "M",
+      "age": 29,
+      "email": "user044@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-10-18T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      },
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      }
+    ],
+    "storeLocation": "Denver",
+    "customer": {
+      "gender": "F",
+      "age": 30,
+      "email": "user045@example.test",
+      "satisfaction": 1
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-11-19T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "pens",
+        "tags": [
+          "writing",
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "5.99"
+        },
+        "quantity": 5
+      },
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      }
+    ],
+    "storeLocation": "Seattle",
+    "customer": {
+      "gender": "M",
+      "age": 31,
+      "email": "user046@example.test",
+      "satisfaction": 2
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-12-20T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "backpack",
+        "tags": [
+          "school",
+          "travel"
+        ],
+        "price": {
+          "$numberDecimal": "49.99"
+        },
+        "quantity": 1
+      },
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      }
+    ],
+    "storeLocation": "London",
+    "customer": {
+      "gender": "F",
+      "age": 32,
+      "email": "user047@example.test",
+      "satisfaction": 3
+    },
+    "couponUsed": false,
+    "purchaseMethod": "Phone"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-01-21T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "envelopes",
+        "tags": [
+          "office",
+          "stationary"
+        ],
+        "price": {
+          "$numberDecimal": "8.25"
+        },
+        "quantity": 10
+      },
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      }
+    ],
+    "storeLocation": "New York",
+    "customer": {
+      "gender": "M",
+      "age": 33,
+      "email": "user048@example.test",
+      "satisfaction": 4
+    },
+    "couponUsed": true,
+    "purchaseMethod": "Online"
+  },
+  {
+    "saleDate": {
+      "$date": "2015-02-22T12:00:00.000Z"
+    },
+    "items": [
+      {
+        "name": "printer paper",
+        "tags": [
+          "office"
+        ],
+        "price": {
+          "$numberDecimal": "22.00"
+        },
+        "quantity": 3
+      },
+      {
+        "name": "notepad",
+        "tags": [
+          "office",
+          "writing"
+        ],
+        "price": {
+          "$numberDecimal": "12.50"
+        },
+        "quantity": 2
+      }
+    ],
+    "storeLocation": "Austin",
+    "customer": {
+      "gender": "F",
+      "age": 34,
+      "email": "user049@example.test",
+      "satisfaction": 5
+    },
+    "couponUsed": false,
+    "purchaseMethod": "In store"
+  }
+]

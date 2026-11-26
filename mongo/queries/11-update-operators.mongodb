@@ -1,0 +1,51 @@
+// Topic: Update operators
+// Collection: learning_mongo.tours, learning_mongo.profiles
+// Shows: $set, $unset, $inc, $push, $pull, $addToSet, upsert
+
+use("learning_mongo");
+
+// $set / $unset on a known tour
+db.tours.updateOne(
+  { tourName: "Big Sur Retreat" },
+  { $set: { tourRegion: "Central Coast", demoFlag: true } }
+);
+
+db.tours.updateOne({ tourName: "Big Sur Retreat" }, { $unset: { demoFlag: "" } });
+
+// $inc
+db.tours.updateOne({ tourName: "Big Sur Retreat" }, { $inc: { tourPrice: 0 } });
+
+// Array operators
+db.tours.updateOne(
+  { tourName: "Big Sur Retreat" },
+  { $addToSet: { tourTags: "weekend" } }
+);
+
+db.tours.updateOne(
+  { tourName: "Big Sur Retreat" },
+  { $pull: { tourTags: "weekend" } }
+);
+
+// $push with $each
+db.profiles.updateOne(
+  { "profile.name": "Ava Example" },
+  { $push: { hobbies: { $each: ["Chess"] } } }
+);
+
+// Upsert creates a document when none match
+db.profiles.updateOne(
+  { "profile.name": "Quinn Upsert" },
+  {
+    $set: {
+      profile: { name: "Quinn Upsert", degree: "B-Tech" },
+      work: { company: "Acme Learning Co", position: "Intern", experience: 0 },
+      education: [],
+      languages: ["English"],
+      hobbies: ["Reading"],
+      skill: "mongo",
+    },
+  },
+  { upsert: true }
+);
+
+db.profiles.find({ "profile.name": "Quinn Upsert" }, { _id: 0 });
